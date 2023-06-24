@@ -175,7 +175,9 @@ class WBPrivateAPI {
         foundProducts = res.data.data.products;
       } catch (err) {
         console.log(err);
-        await this.getCatalogPage(catalogConfig, page);
+
+        // TODO: retry
+        // await this.getCatalogPage(catalogConfig, page);
       }
       resolve(foundProducts);
     });
